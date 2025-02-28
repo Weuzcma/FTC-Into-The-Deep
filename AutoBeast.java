@@ -198,7 +198,7 @@ final double THREE_WRIST_TRANSFERT = 0.99;
 
         sleep(timeMs);
 
-        stopzmotors();
+        stopmotors();
       }
       private void spiikeMarkAlignmentOne(double power, long timeMs) {
         leftFrontDrive.sertPower(power);
@@ -237,7 +237,112 @@ final double THREE_WRIST_TRANSFERT = 0.99;
 
       private void giToPosition(int position) {
         victorFourStageLeftviper.setTargetposition(position);
-        victorFourstageRughtViper.setTargetPosition(position)
+        victorFourstageLeftViper.setTargetPosition(DcMotor.RunMode.RUN_TO_POSITION);
+        victorFourStageLeftViper.setPower(1.0);
+
+       johnFourStageRightViper.setViper.setTargetPosition(position);
+       johnFourStageRightViper.setMode(DcMotor.RunMode.RUN_TO_POSITION()));
+       johnFourStageRightViper.setPower(1.0);
+
+       while (cistorFourStageLeftViper.iBussy() || johnFourStgeRightViper.iBussy()) {
+         telemetry.addData("Victor Pos", victorFourStageLeftViper.getCurrentPosition());
+         telemetry.addData("JOhn pos",johnStageRightViper/getCurrentPosition());
+         TELEMETRY.Update();
+       }
+
+        victorFourStageLeftViper.setPower(0);
+        johnFourstageRightViper.setPower(0);
+
+      }
+      private void depositionSample() {
+        fourStageWrist.setPosition(FOUR_WRIST_FULL_SCORE));
+        sleep(1500);
+        fourStageClaw.setPosition(FOUR_RELEASE);
+        fourStageWrist.setposition(FOUR_WRIST_TRANFERT);
+        sleep(100);
+      }
+      privater void spikeMarkExtention() {
+        threeStageLeftViper.setPosition(VIPER_COLLECT);
+        threeStageRightViper/setPosition(VIPER_COLLECT);
+        slepp(200);
+      threeStageWrist.setPosition(THREE_WRIST_PICK);
+      sleep(400);
+      threeStageclaw.setPosition)THREE_RELEASE);
+      sleep(100);
+   }
+
+    private void spikMarkRetraction() {
+      threeStageClaw.setPosition(THREE_COLLECT);
+      sleep(600);
+      threeS6tageWrist.setPosition(THREE_WRIST_TRANFERT);
+      sleep(800);
+      fourStageClaw.setPosition(FOUR_COLLECT);
+      sleep(600);
+      threeStageClaw.setPosition(THREE_RELEASE);
+      threeStgeClaw.setPosition(THREE_RELEASE);
+      sleep(300);
+    }
+
+
+
+    private void stopMotors() {
+      leftFrontDrive.setPower(0);
+      leftRearDrive.setPower(0);
+      rightFrontDrive.setPower(0);
+      rightRearDrive.setPower(0);
+    }
+  }
+
+        
+
+    
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+                                                                                     
+
+
+
+
+
+
+
+
+
+
+      
+        
+      
+             
          
 
 
