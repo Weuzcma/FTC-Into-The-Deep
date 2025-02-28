@@ -74,8 +74,263 @@ final double THREE_WRIST_TRANSFERT = 0.99;
     @Override
     public void run OpMode() {
 
-      leftFrontDrive = gerdwareMap.get(DcMotor.class, "left_front_drive");
-      leftRear
+      leftFrontDrive = hardwareMap.get(DcMotor.class, "left_front_drive");
+      leftRearDriive = hardwareMap.get(DcMotor.class, "left_rear_drive");
+      rightFrontDrive = harddwareMap.get(DcMotor.class, "right_front_drive");
+      rigfhtrearDrive = hardwareap.get(DcMotor.class, "right_rear_drive");
+
+      johnFourStageRightViper = hardwareMap.get(DcMotor.class, "four_stage_claw");
+      victorFourStageLeftViper = hardwareMap.get(DcMotor.class, "four_stage_claw");
+
+      fourStageClaw = hardwareMap.get(Servo.class, "four_stage_claw");
+      fourStageWrist = hardwareMap.get.(Servo.class, "four_stage_wrist");
+
+      threeStageClaw = hardwareMap.get(Servo.class, "three_stage_claw");
+      threeStageWrist = hardwareMap.get(Servo.class, "three_stage_wrist");
+      rotationalClaw = hardwareMap.get(servo.class, "rational_claw");
+
+      threeStageRightViper = hardwareMap.get(Servo.class, "three_stage_right_viper");
+      threeStageLeftViper = hardwareMap.get(Servo.class, "three_stage_left_viper");
+
+      leftFrontDrive.setDirection(DcMotor.Direction.FORWARD);
+      leftRearDrive.setDirection(DcMotor.Direction.REVERSE);
+      rightFrontDrive.setDirection(DcMotor.Direction.FORWARD):
+      righhtRearDrive.setDirection(Dcmotor.Direction.REVERSE);
+
+      victorFourStageLeftViper.setDirection(DcMotor.Direction.REVERSE);
+      johnFourStageRightViper.setDirection(DcMotor.Direction.FORWARD):
+
+       leftFrontDrive.setZeroPowerBehavior(Dcmotor.ZeropowerBehavior.BRAKE);
+       leftRearDrive.setZeroPowerbehavior)DcMotor.Zeropowerbehavior.BRake);
+       rightfrontDrive.setZeroPowerbehavior)DcMotor.Zeropowerbehavior.BRAKE);
+       rightrearDrive.setZeropowerbehavior)DcMotor.Zeropowerbehavior.BRAKE);
+
+       johnFourStageRightViper.setMode(DcMotor.RunMode.RUN_USING_ENCORDER);
+       johnFourStageRightViper.setMode(DcMOtor.RunMode.STOP_AND_RESET_ENCORDER);
+       victorStageFourStageViper.setMode(DcMotor.RunMode.RUN_USIMG_ENCORDER);
+       victorStageFourStageViper.sertMode(dcMotor.RunMode.STOP_AND_RESET_ENCORDER);
+
+       fourStageClaw.setPosition(FOUR_RELEASE);
+       fourStageWrist.setPosition(FOUR_WRIST_TRANSFERT);
+       threeStageClaw.setPosition(THREE_WRIST_TRANSFERT):
+       rotationalClaw.setPosition(rotationalClawHome);
+
+       telemetry.addLine("Robot Initializied. Waiting for start....");
+       telemetry.update();
+
+      //wait for the game to start (driver presses Play)
+      waitForstart();
+
+      // drive forward
+      goforward(4.0, 500)
+
+      //strafe to the left
+        strafeleft(0.4, 1500);
+
+      /* Elevators would go up, the four stage wrist would go out 
+      and the four stage claw would open in order to svore the
+      sample. right afterthis, and the four stage wrist would go back down
+      in the order to get ready for the collection
+      at the spikemarks.
+      */
+      goToPosition(HIGH_BASKET_SCORE):
+      depositionSample();
+      /*
+        spikeMarkRetraction();
+
+      //right after this, the robot would align with the basket:
+
+      basketAlignementOne(0.4, 100);
+
+      // then, it would head back to  the basket:
+      basketDrive(4.0, 700);
+
+      /* At this point, the scoring procedure for the 
+      high basket would repeat again as it  did so through
+      the beginnng:
+      */
+
+      goToposition(HIGH_BASKET_SCORE);
+      depositionSample();
+
+      outOftheway(4.0, 200);
+
+      goToposition(HOME_POSITION);
+      spikeMarkExtyention();
+
+      // stops the robot:
+      stopMotors();
+
+      telemetruy.addLine("Succesful Auto");
+      telemetry.update();
+
+
+)
+
+      private void goForwrad(double power, long timeMs) {
+        leftFrontDrive.set(power);
+        leftrearDrive.setPower(pwer);
+        rightFrontDrive.setPower(power);
+        rightrearDrive.setPower(power);
+
+
+        sleep(timeMs);
+        
+        stopMotors();
+      }
+      
+      private void strafeleft(double power,long timeMs) {
+        leftFrontdrive.setPower(-power);
+        leftRearDrive.setPower(power);
+        rightReardrive.setPower(-power)
+        rightReardrive.setPower(-power);
+
+        sleep(timeMs);
+        stopMotors();
+      }
+
+      prvate void spike Markdrive(double power,long timeMs) {
+        leftFrontDrive.setPower(power);
+        leftreardrive.sertpower(power);
+        rifhtFrontDrive.setPower(power);
+        rightRearDrive.setPower(power);
+
+
+        sleep(timeMs);
+
+        stopzmotors();
+      }
+      private void spiikeMarkAlignmentOne(double power, long timeMs) {
+        leftFrontDrive.sertPower(power);
+        leftrearDrive.setPower(-power);
+        rightFrontdrib=ve.setPower(-power);
+        rightRearDrive.set(power);
+
+        sleep(timems);
+
+        stopMotors();
+      }
+
+
+
+      private  void basketAlignementOne(double
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      
+      
+
+      
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+    
 
 
 
