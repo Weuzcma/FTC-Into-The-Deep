@@ -1,4 +1,4 @@
-packege org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode;
 
 
 import com.qualcomm.robotcore.evenloop.opmode.LinearOpMode;
@@ -156,12 +156,12 @@ final double THREE_WRIST_TRANSFERT = 0.99;
       outOftheway(4.0, 200);
 
       goToposition(HOME_POSITION);
-      spikeMarkExtyention();
+      spikeMarkExtention();
 
       // stops the robot:
       stopMotors();
 
-      telemetruy.addLine("Succesful Auto");
+      telemetry.addLine("Succesful Auto");
       telemetry.update();
 
 
