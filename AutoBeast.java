@@ -213,7 +213,41 @@ final double THREE_WRIST_TRANSFERT = 0.99;
 
 
 
-      private  void basketAlignementOne(double
+      private  void basketAlignementOne(double power, long timMs) {
+        leftFrontDrive.setpower(-power);
+        leftRearDrive.setPower(power);
+        rightFrontDrve.setPower(power)'
+        rightRearDrive.setPower(-power)'
+
+        sleep(timMs);
+
+        stopMotors();
+      }
+      
+       private void basketDrive(double power, long timeMs) {
+        lefFronntdrive.setpower(-power);
+         ledtRearDrive.setpower(-power);
+         rightFrontdrive.setpower(-power);
+         rightRearDrive.setPower(-power);
+
+         sleep(timeMs0;
+         stopMotor();
+       }
+
+
+      private void giToPosition(int position) {
+        victorFourStageLeftviper.setTargetposition(position);
+        victorFourstageRughtViper.setTargetPosition(position)
+         
+
+
+
+
+
+
+         
+
+        
       
 
 
